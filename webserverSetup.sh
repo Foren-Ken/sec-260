@@ -10,8 +10,8 @@ openssl ca -config intermediate/openssl.cnf -extensions server_cert -days 375 -n
 chmod 444 intermediate/certs/www.example.com.cert.pem
 
 # Verify Cert:
-openssl x509 -noout -text -in intermediate/certs/www.example.com.cert.pem | more
-openssl verify -CAfile intermediate/certs/ca-chain.cert.pem intermediate/certs/www.example.com.cert.pem
+openssl x509 -noout -text -in intermediate/certs/10.0.17.29.cert.pem | more
+openssl verify -CAfile intermediate/certs/ca-chain.cert.pem intermediate/certs/10.0.17.29.cert.pem
 
 mkdir /root/serverPackage
 chmod 400 /root/serverPackage
